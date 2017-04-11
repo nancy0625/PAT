@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+  public static void main(String[] args) throws IOException {
+    Scanner sc = new Scanner(new BufferedInputStream(System.in));
+    String str[] = {"ling","yi","er","san","si","wu","liu","qi","ba","jiu"};
+    String st =sc.nextLine();
+    char arr[] = st.toCharArray();
+    for(int i=0;i<arr.length;i++){
+      String t = String.valueOf(arr[i]);
+      if(t.equals("-")){
+        System.out.print("fu");
+      }else{
+        int a = Integer.parseInt(t);
+        System.out.print(str[a]);
+      }
+      if(i!=(arr.length-1)){
+        System.out.print(" ");
+      }
+    }
+    
+    
+  }
